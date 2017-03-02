@@ -100,4 +100,22 @@ class Embed_Islamic_Resource_Public {
 
 	}
 
+	/**
+	 * Register all shortcodes functions
+	 *
+	 * @since    1.0.0
+	 */
+	public function register_shortcodes(){
+		add_shortcode( 'quran', array( $this, 'shortcode_quran') );
+	}
+
+	/**
+	 * Quran shortcode
+	 *
+	 * @since    1.0.0
+	 */
+	public function shortcode_quran( $attr ){
+		return "ini quran loh";
+	}
+
 }
