@@ -237,7 +237,10 @@ class Embed_Islamic_Resource_Public {
 				"Al-Nas"
 			);
 
+			$response = file_get_contents('http://api.alquran.cloud/ayah/'.$attr[0]);
+
 			$output = "surah: " . $chapters[$chapter_num-1] . ", ayah:  " . $verse_num;
+			$output = $response;
 		}
 		return "ini quran loh " . $output;
 	}
